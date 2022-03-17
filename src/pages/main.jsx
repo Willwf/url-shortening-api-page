@@ -1,11 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { Header } from "../components/Header";
+import { Root } from "../components/root";
 import "../styles/main.css";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Header />
+    <Root />
   </React.StrictMode>,
   document.getElementById("root")
 );
