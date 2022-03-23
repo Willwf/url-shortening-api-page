@@ -1,5 +1,11 @@
 import { Header } from "./header";
+import { Main } from "./main";
 
 export function Root() {
-  return <Header />;
+  return (
+    <>
+      <Header />
+      <Main />
+    </>
+  );
 }

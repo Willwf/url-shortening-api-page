@@ -13,12 +13,12 @@ export function Header() {
       <img src={logo} alt="Shortly Logo" className="h-10" />
       <button
         type="button"
-        class="cursor-pointer active:opacity-70 space-y-1.5 lg:hidden"
+        className="cursor-pointer active:opacity-70 space-y-1.5 lg:hidden"
         onClick={toggleClass}
       >
-        <div class="w-8 h-1 bg-gray-400"></div>
-        <div class="w-8 h-1 bg-gray-400"></div>
-        <div class="w-8 h-1 bg-gray-400"></div>
+        <div className="w-8 h-1 bg-gray-400"></div>
+        <div className="w-8 h-1 bg-gray-400"></div>
+        <div className="w-8 h-1 bg-gray-400"></div>
       </button>
       <div
         className={`${
