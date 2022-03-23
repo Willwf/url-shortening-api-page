@@ -23,7 +23,7 @@ export function Header() {
       <div
         className={`${
           currentState ? "hidden" : ""
-        } flex flex-col justify-between items-center absolute top-28 w-full bg-dark-violet rounded-xl text-white text-xl`}
+        } flex flex-col justify-between items-center absolute top-28 w-full bg-dark-violet rounded-xl text-white text-xl z-10`}
       >
         <a href="#" className="cursor-pointer mt-8 hover:opacity-70">
           Features

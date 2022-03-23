@@ -71,10 +71,11 @@ export function Main() {
               content.
             </p>
           </div>
-          <div className="bg-white mt-28 w-[85vw] flex flex-col justify-center items-center relative">
+          <div className="w-2 h-28 bg-cyan"></div>
+          <div className="bg-white w-[85vw] flex flex-col justify-center items-center relative">
             <div className="w-24 h-24 rounded-full bg-dark-violet flex flex-col justify-center items-center  absolute -top-12">
               <img
-                src={brandRecognitionIcon}
+                src={detailedRecordsIcon}
                 alt="Detailed Records"
                 className="w-10"
               />
@@ -88,7 +89,8 @@ export function Main() {
               decisions.
             </p>
           </div>
-          <div className="bg-white mt-28 w-[85vw] flex flex-col justify-center items-center relative">
+          <div className="w-2 h-28 bg-cyan"></div>
+          <div className="bg-white w-[85vw] flex flex-col justify-center items-center relative">
             <div className="w-24 h-24 rounded-full bg-dark-violet flex flex-col justify-center items-center  absolute -top-12">
               <img
                 src={fullyCustomizableIcon}
