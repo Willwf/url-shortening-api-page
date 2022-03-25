@@ -4,7 +4,31 @@ import detailedRecordsIcon from "../assets/icon-detailed-records.svg";
 import fullyCustomizableIcon from "../assets/icon-fully-customizable.svg";
 import { Results } from "./results";
 
+import { useState } from "react";
+
 export function Main() {
+  const [inputValue, setInputValue] = useState("");
+  const [errorMessage, setErrorMessage] = useState(false);
+
+  function handleSubmit(event) {
+    event.preventDefault();
+
+    if (event.target[0].value) {
+      fetch(
+        `https://geo.ipify.org/api/v2/country,city?apiKey=${apiKey}&ipAddress=${event.target[0].value}`
+      )
+        .then((response) => response.json())
+        .then((result) => {});
+    } else {
+      setErrorMessage(true);
+    }
+  }
+
+  function inputFormater(event) {
+    setInputValue(event.target.value);
+    setErrorMessage(false);
+  }
+
   return (
     <main className="sans">
       <section className="flex flex-col justify-center items-center relative">
@@ -27,16 +51,28 @@ export function Main() {
         </button>
 
         <div className="bg-dark-violet bg-shorten-mobile bg-no-repeat bg-right-top w-[85vw] p-5 rounded-lg absolute -bottom-20">
-          <form action="">
-            <div className="flex flex-col w-[100%] gap-4">
+          <form onSubmit={handleSubmit}>
+            <div className="flex flex-col w-[100%]">
               <input
-                className="py-3 px-3 rounded-md text-md outline-none"
+                className={`py-3 px-3 rounded-md text-md focus:outline-none ${
+                  errorMessage
+                    ? "border-red border-4 border-solid placeholder:text-red placeholder:text-opacity-50"
+                    : ""
+                }`}
                 type="text"
                 placeholder="Shorten a link here..."
-                required
+                value={inputValue}
+                onChange={inputFormater}
               />
+              {errorMessage ? (
+                <span className="text-red text-xs mt-2 italic">
+                  Please add a link
+                </span>
+              ) : (
+                ""
+              )}
               <button
-                className="bg-cyan py-3 px-10 rounded-md text-lg text-white font-bold"
+                className="bg-cyan py-3 px-10 rounded-md text-lg text-white font-bold mt-4"
                 type="submit"
               >
                 Shorten it!
