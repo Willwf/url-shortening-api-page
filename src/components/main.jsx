@@ -8,25 +8,47 @@ import { useState } from "react";
 
 export function Main() {
   const [inputValue, setInputValue] = useState("");
-  const [errorMessage, setErrorMessage] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
+  const [newLink, setNewLink] = useState(false);
 
   function handleSubmit(event) {
     event.preventDefault();
 
     if (event.target[0].value) {
-      fetch(
-        `https://geo.ipify.org/api/v2/country,city?apiKey=${apiKey}&ipAddress=${event.target[0].value}`
-      )
-        .then((response) => response.json())
-        .then((result) => {});
+      fetch(`https://api.shrtco.de/v2/shorten?url=${event.target[0].value}`)
+        .then((response) => {
+          return response.json();
+          // if (response.ok) {
+          //   return response.json();
+          // }
+
+          // throw new Error();
+        })
+        .then((data) => {
+          if (data.ok) {
+            localStorage.clear();
+
+            localStorage.setItem(
+              data.result.original_link,
+              data.result.full_short_link
+            );
+            setNewLink(!newLink);
+            setInputValue("");
+          } else {
+            throw new Error(data.error);
+          }
+        })
+        .catch((error) => {
+          setErrorMessage(error.toString());
+        });
     } else {
-      setErrorMessage(true);
+      setErrorMessage("Please add a link");
     }
   }
 
   function inputFormater(event) {
     setInputValue(event.target.value);
-    setErrorMessage(false);
+    setErrorMessage("");
   }
 
   return (
@@ -66,7 +88,7 @@ export function Main() {
               />
               {errorMessage ? (
                 <span className="text-red text-xs mt-2 italic">
-                  Please add a link
+                  {errorMessage}
                 </span>
               ) : (
                 ""
@@ -82,7 +104,7 @@ export function Main() {
         </div>
       </section>
       <section className="bg-very-light-gray flex flex-col justify-center items-center text-center">
-        <Results />
+        <Results newLink={newLink} />
         <div className="pt-20 w-[90vw]">
           <h1 className="text-2xl text-very-dark-violet font-bold">
             Advanced Statistics
