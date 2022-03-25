@@ -2,6 +2,7 @@ import illustrationWorking from "../assets/illustration-working.svg";
 import brandRecognitionIcon from "../assets/icon-brand-recognition.svg";
 import detailedRecordsIcon from "../assets/icon-detailed-records.svg";
 import fullyCustomizableIcon from "../assets/icon-fully-customizable.svg";
+import { Results } from "./results";
 
 export function Main() {
   return (
@@ -32,6 +33,7 @@ export function Main() {
                 className="py-3 px-3 rounded-md text-md outline-none"
                 type="text"
                 placeholder="Shorten a link here..."
+                required
               />
               <button
                 className="bg-cyan py-3 px-10 rounded-md text-lg text-white font-bold"
@@ -44,7 +46,8 @@ export function Main() {
         </div>
       </section>
       <section className="bg-very-light-gray flex flex-col justify-center items-center text-center">
-        <div className="pt-40 w-[90vw]">
+        <Results />
+        <div className="pt-20 w-[90vw]">
           <h1 className="text-2xl text-very-dark-violet font-bold">
             Advanced Statistics
           </h1>
