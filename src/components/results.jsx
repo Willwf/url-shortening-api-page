@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { CopyButton } from "./copybutton";
 
 export function Results({ newLink }) {
   const localLinks = { ...localStorage };
@@ -23,12 +24,7 @@ export function Results({ newLink }) {
               <p className="text-cyan truncate text-base">
                 {localLinks[originalLink]}
               </p>
-              <button
-                className="bg-cyan hover:bg-active-cyan py-3 px-10 rounded-md text-lg text-white font-bold"
-                type="submit"
-              >
-                Copy
-              </button>
+              <CopyButton copyText={localLinks[originalLink]} />
             </div>
           </li>
         );
