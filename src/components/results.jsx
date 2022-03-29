@@ -24,7 +24,7 @@ export function Results({ newLink }) {
                 {localLinks[originalLink]}
               </p>
               <button
-                className="bg-cyan py-3 px-10 rounded-md text-lg text-white font-bold"
+                className="bg-cyan hover:bg-active-cyan py-3 px-10 rounded-md text-lg text-white font-bold"
                 type="submit"
               >
                 Copy

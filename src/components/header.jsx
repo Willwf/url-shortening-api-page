@@ -13,7 +13,7 @@ export function Header() {
       <img src={logo} alt="Shortly Logo" className="h-10" />
       <button
         type="button"
-        className="cursor-pointer active:opacity-70 space-y-1.5 lg:hidden"
+        className="cursor-pointer active:opacity-50 space-y-1.5 hover:opacity-70 lg:hidden"
         onClick={toggleClass}
       >
         <div className="w-8 h-1 bg-gray-400"></div>
@@ -40,7 +40,7 @@ export function Header() {
         </a>
         <a
           href="#"
-          className="my-8 py-2 cursor-pointer bg-cyan hover:opacity-70 w-5/6 text-center rounded-full"
+          className="my-8 py-2 cursor-pointer hover:bg-active-cyan bg-cyan w-5/6 text-center rounded-full"
         >
           Sign Up
         </a>

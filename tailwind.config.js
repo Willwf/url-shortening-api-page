@@ -6,6 +6,7 @@ module.exports = {
     },
     extend: {
       colors: {
+        "active-cyan": "#9BE3E2",
         cyan: "hsl(180, 66%, 49%)",
         "dark-violet": "hsl(257, 27%, 26%)",
         red: "hsl(0, 87%, 67%)",

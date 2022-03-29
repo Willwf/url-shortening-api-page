@@ -68,7 +68,7 @@ export function Main() {
           Build your brand's recognition and get detailed insights on how your
           links are performing.
         </p>
-        <button className="bg-cyan py-4 px-10 rounded-full text-lg text-white font-bold mb-40">
+        <button className="bg-cyan hover:bg-active-cyan py-4 px-10 rounded-full text-lg text-white font-bold mb-40">
           Get Started
         </button>
 
@@ -94,7 +94,7 @@ export function Main() {
                 ""
               )}
               <button
-                className="bg-cyan py-3 px-10 rounded-md text-lg text-white font-bold mt-4"
+                className="bg-cyan hover:bg-active-cyan py-3 px-10 rounded-md text-lg text-white font-bold mt-4"
                 type="submit"
               >
                 Shorten it!
@@ -172,7 +172,7 @@ export function Main() {
           <p className="text-2xl text-white font-bold">
             Boost your links today
           </p>
-          <button className="bg-cyan py-4 px-10 rounded-full text-lg text-white font-bold mt-4">
+          <button className="bg-cyan hover:bg-active-cyan py-4 px-10 rounded-full text-lg text-white font-bold mt-4">
             Get Started
           </button>
         </div>
