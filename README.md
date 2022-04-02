@@ -30,10 +30,16 @@ Users should be able to:
 
 ### Screenshots
 
+> Mobile Preview
+> <img src="./public/mobile.png" height="750">
+
+> Desktop Preview
+> <img src="./public/desktop.png" height="350">
+
 ### Links
 
 - Solution URL: [https://github.com/Willwf/url-shortening-api-page](https://github.com/Willwf/url-shortening-api-page)
-<!-- - Live Site URL: [Add live site URL here](https://your-live-site-url.com) -->
+- Live Site URL: [https://url-shortening-api-page.vercel.app/](https://url-shortening-api-page.vercel.app/)
 
 ## My process
 
@@ -41,19 +47,24 @@ Users should be able to:
 
 - Semantic HTML5 markup
 - Flexbox
+- Grid
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
 - [Tailwind](https://tailwindcss.com/) - A utility-first CSS framework
 - [Shrtcode](https://shrtco.de/) - The privacy-friendly URL Shortener
+- [Vite.js](https://vitejs.dev/) - Bundler JS
 
 ### What I learned
 
+This project was very interesting to me because I could fully use tailwind. It helped me understand how powerful it is and how much my knowledge of CSS was important. It was very fun to use it and search ways of doing things. I'm quite very happy with the result.
+
 ### Continued development
+
+I intend to continue to advance on the front-end development but I want to try some back-end too. Using the local storage to save my information was not satisfying.
 
 ### Useful resources
 
-<!-- - [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept. -->
+- [Implementing copy-to-clipboard in React with Clipboard API](https://blog.logrocket.com/implementing-copy-clipboard-react-clipboard-api/) - This is an amazing article which helped me to build a copy button for the project. I'd recommend it to anyone since it also helped me to fixate some react concepts.
 
 ## Author
 
